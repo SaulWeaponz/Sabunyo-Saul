@@ -1,3 +1,23 @@
+#Introduction Of the SaulBot
+# The SaulBot performs the following main actions:
+
+# 1. Configuration Loading: Reads API keys and secrets from a .env file for security.
+
+# 2. API Initialization: Sets up connections to Twitter (X), Google Gemini, and Pexels APIs.
+
+# 3. Content Generation:
+
+# Uses Gemini AI to generate a motivational tweet text based on the day of the week.
+
+# Uses the Pexels API to search for and download a relevant image based on keywords associated with the tweet's theme.
+
+# 4. Tweet Posting: Composes and posts the tweet with both the generated text and the downloaded image to Twitter (X). Includes a fallback to text-only if image fetching fails.
+
+# 5. Scheduling: Uses the schedule library to run this process automatically every day at a specific time.
+
+# 6. Cleanup: Deletes the temporary image file after tweeting to keep the system tidy.
+
+
 import tweepy # For interacting with Twitter (X) API
 import schedule # For scheduling daily tasks
 import time # For pausing execution (sleep)
